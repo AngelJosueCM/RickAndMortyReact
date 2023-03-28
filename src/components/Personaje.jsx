@@ -13,15 +13,17 @@ const Personaje = () => {
     unicoPersonaje(params.id, setPersonaje)
   },[])
   return (
-    <>
+    <div className='row'>
       {personaje != null ? (
-      <div>
-      <h2>Personaje con el id{params.id }</h2>
-      <p>con el nombre{personaje.name}</p>
-      <img src={personaje.image} alt=""/>
+      <div className='card' style={{minWidth: "50px"}}>
+      <h2>Nombre: {personaje.name}</h2>
+      <img src={personaje.image} width="200px"/>
+      <p>Especie: {personaje.species}</p>
+      <p>Localizacion: {personaje.location.name}</p>
+      
       </div>
        ) : ('no hay personaje')}
-    </>
+    </div>
   )
 }
 

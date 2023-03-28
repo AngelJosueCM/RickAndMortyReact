@@ -3,9 +3,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Inicio from './components/Inicio'
 import Personaje from './components/Personaje'
+import Navbar from "./components/Navbar";
+
 
 function App() {
   return (
+    <>
+    <Navbar brand="Rick and Morty APP"/>
     <div className="contenedor">
       <BrowserRouter>
         <Routes>
@@ -14,6 +18,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </div>
+    </>
   );
 }
 
